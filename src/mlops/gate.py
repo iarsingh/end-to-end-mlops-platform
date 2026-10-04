@@ -11,5 +11,6 @@ def check(body):
     if image.endswith(":latest") or image == "latest":
         failed.append("image_tag_latest")
 
-    if not body.get("alias"): failed.append("missing_alias")\n    if not body.get("tests_passed"): failed.append("tests")
+    if not body.get("alias"): failed.append("missing_alias")
+    if not body.get("tests_passed"): failed.append("tests")
     return {"passed": not failed, "failed": failed, "applied": False}
