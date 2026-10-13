@@ -1,5 +1,12 @@
 # End-to-End MLOps Platform
 
+## Overview
+
+A release checklist gate for the train, evaluate and serve path of an ML model. The `POST /check` endpoint passes only when the model has a registry alias, its tests exist and the image is referenced by digest; images tagged `latest` fail. A versioned `/v1` ops API adds workspaces, tenant isolation, job approval and audit records.
+
+- **Built with:** Python, pytest, Docker, GitHub Actions
+- **Scope:** Local lab with tests; it does not call a hosted model and refuses production apply.
+
 <!-- project-guide:start -->
 ## Project guide
 
